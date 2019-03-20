@@ -1,0 +1,33 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-list>
+
+      <ion-item>
+        <ion-label floating>Usuário</ion-label>
+        <ion-input type="text" autofocus [(ngModel)]="txtUser"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Senha</ion-label>
+        <ion-input type="password" [(ngModel)]="txtPass"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div padding>
+      <button (click)="goToConta()"ion-button color="primary" block>Entrar</button>
+    </div>
+
+    <ion-item>
+      <ion-label>Lembrar Senha</ion-label>
+      <ion-checkbox color="primary" disabled="false"></ion-checkbox>
+    </ion-item>
+
+</ion-content>
