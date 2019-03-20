@@ -12,6 +12,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { ComprasPage } from '../pages/compras/compras';
 import { ContaPage } from '../pages/conta/conta';
+import { IonicStorageModule } from '@ionic/storage';
+import { LocalstorageProvider } from '../providers/localstorage/localstorage';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ContaPage } from '../pages/conta/conta';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -40,7 +43,8 @@ import { ContaPage } from '../pages/conta/conta';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    LocalstorageProvider
   ]
 })
 export class AppModule {}
